@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnep5bnyajdnt"]
+
+[ext_resource type="PackedScene" uid="uid://b6r67vcujp4sj" path="res://src/Nodes/Board.tscn" id="1_vjh6b"]
+[ext_resource type="Environment" uid="uid://sk1p8d7ftq3w" path="res://assets/default.tres" id="2_0grfx"]
+[ext_resource type="Script" path="res://src/Debug/FreelookCamera.gd" id="2_qhlh0"]
+
+[node name="Game" type="Node3D"]
+
+[node name="Board" parent="." instance=ExtResource("1_vjh6b")]
+
+[node name="FreeLookCamera" type="Camera3D" parent="."]
+transform = Transform3D(-1, 1.48612e-15, -8.74228e-08, -2.21399e-08, 0.9674, 0.253251, 8.45728e-08, 0.253251, -0.9674, 0, 2.97413, -5.06922)
+current = true
+script = ExtResource("2_qhlh0")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_0grfx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.562026, 0.82712, 0, -0.82712, 0.562026, 2.08165e-12, 2.08165e-12, 2.08165e-12)
